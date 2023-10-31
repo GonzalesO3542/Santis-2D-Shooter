@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// This class inherits from the UIelement class and handles the display of the high score
@@ -9,7 +10,7 @@ using UnityEngine.UI;
 public class HighScoreDisplay : UIelement
 {
     [Tooltip("The text UI to use for display")]
-    public Text displayText = null;
+    public TMP_Text displayText = null;
 
     /// <summary>
     /// Description:
@@ -23,7 +24,7 @@ public class HighScoreDisplay : UIelement
     {
         if (displayText != null)
         {
-            displayText.text = "High: " + GameManager.instance.highScore.ToString();
+            displayText.text = "High Score: " + GameManager.instance.highScore.ToString();
         }
     }
 

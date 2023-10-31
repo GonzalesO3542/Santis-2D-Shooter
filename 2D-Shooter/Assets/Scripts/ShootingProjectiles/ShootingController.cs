@@ -123,8 +123,12 @@ public class ShootingController : MonoBehaviour
 
             if (fireEffect != null)
             {
+            
                 Instantiate(fireEffect, transform.position, transform.rotation, null);
+                GameObject fireEffectObject = Instantiate(fireEffect, transform.position, transform.rotation, null);
+                Destroy(fireEffectObject, 0.5f);
             }
+
 
             // Restart the cooldown
             lastFired = Time.timeSinceLevelLoad;
