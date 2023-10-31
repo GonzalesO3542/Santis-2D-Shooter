@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3562651836113712045, guid: aee1688b385340b4bab2b46707955895, type: 3}
-  projectileHolder: {fileID: 2045608494336942112}
+  projectileHolder: {fileID: 0}
   isPlayerControlled: 1
   fireRate: 0.05
   projectileSpread: 1
