@@ -151,6 +151,7 @@ MonoBehaviour:
   useLives: 1
   currentLives: 3
   maximumLives: 5
+  fighter: {fileID: 156194956389250975}
   deathEffect: {fileID: 6218169049356006189, guid: 68794701c80057447857bb433e54c579, type: 3}
   hitEffect: {fileID: 5156419567158778961, guid: d35295653acdbe24081a5caee3d9c353, type: 3}
 --- !u!50 &2017105447717624584

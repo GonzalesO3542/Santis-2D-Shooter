@@ -34,6 +34,8 @@ public class Health : MonoBehaviour
     [Tooltip("The maximum number of lives this health can have")]
     public int maximumLives = 5;
 
+    public GameObject fighter;
+
     /// <summary>
     /// Description:
     /// Standard unity funciton called before the first frame update
@@ -110,6 +112,7 @@ public class Health : MonoBehaviour
     {
         transform.position = respawnPosition;
         currentHealth = defaultHealth;
+        fighter.SetActive(true);
     }
 
     /// <summary>
@@ -224,7 +227,9 @@ public class Health : MonoBehaviour
         currentLives -= 1;
         if (currentLives > 0)
         {
-            Respawn();
+            fighter.SetActive(false);
+            Invoke("Respawn", 1f);
+
         }
         else
         {
