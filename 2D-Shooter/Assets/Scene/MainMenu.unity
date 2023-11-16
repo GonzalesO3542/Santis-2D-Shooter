@@ -1077,11 +1077,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3936081893955408131, guid: 395330b6cfb66f246a4c7682cf797c5e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3936081894486422178, guid: 395330b6cfb66f246a4c7682cf797c5e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7298843665044941494, guid: 395330b6cfb66f246a4c7682cf797c5e, type: 3}
       propertyPath: newCursorSprite
