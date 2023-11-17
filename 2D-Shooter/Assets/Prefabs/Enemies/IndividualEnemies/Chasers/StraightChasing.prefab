@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 8022954021460962557}
   - component: {fileID: 4327850106528714602}
   - component: {fileID: 584683058982610388}
-  m_Layer: 9
+  - component: {fileID: 6607557907065340114}
+  m_Layer: 3
   m_Name: StraightChasing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,6 +154,7 @@ MonoBehaviour:
   useLives: 0
   currentLives: 3
   maximumLives: 5
+  fighter: {fileID: 0}
   deathEffect: {fileID: 2452382815751308013, guid: 990f3751046a4d840806774f23579fe2, type: 3}
   hitEffect: {fileID: 6229913163069739088, guid: d6029318d740811488fd5dd38a7e1ce1, type: 3}
 --- !u!50 &4327850106528714602
@@ -211,7 +213,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -237,6 +239,25 @@ PolygonCollider2D:
       - {x: 0.43682837, y: 0.14506364}
       - {x: 0.4403417, y: 0.24401402}
   m_UseDelaunayMesh: 0
+--- !u!114 &6607557907065340114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8282131552441171991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d271c85fb6a1e546b37f1f81e5a648d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamId: 1
+  damageAmount: 2147483647
+  hitEffect: {fileID: 0}
+  destroyAfterDamage: 1
+  dealDamageOnTriggerEnter: 0
+  dealDamageOnTriggerStay: 0
+  dealDamageOnCollision: 1
 --- !u!1 &8282131553695226669
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8282131553695226667}
   - component: {fileID: 8282131553695226666}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: GunOne
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
