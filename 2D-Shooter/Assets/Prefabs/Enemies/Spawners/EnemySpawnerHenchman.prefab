@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5193187741851290257}
   - component: {fileID: 5193187741851290256}
   m_Layer: 0
-  m_Name: EnemySpawnerStraight
+  m_Name: EnemySpawnerHenchman
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830b9e1d08327e44eaeaccf7737c98b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8282131552441171991, guid: fd821cc36f666d54592388e02f75fcb5, type: 3}
+  enemyPrefab: {fileID: 5128321565139861340, guid: bbe74f3f421b67140bfd6d618ebf4e37, type: 3}
   target: {fileID: 0}
   spawnRangeX: 0
   spawnRangeY: 0

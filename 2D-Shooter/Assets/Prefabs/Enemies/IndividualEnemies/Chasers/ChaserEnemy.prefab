@@ -126,7 +126,7 @@ MonoBehaviour:
   moveSpeed: 3
   scoreValue: 20
   followTarget: {fileID: 1567815081068962690, guid: c69580557d5fab240848345318bee456, type: 3}
-  followRange: 5.7
+  followRange: 100
   guns: []
   shootMode: 1
   movementMode: 1
