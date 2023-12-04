@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void LateUpdate()
     {
-        HandleBehaviour();       
+        HandleBehaviour();
     }
 
     /// <summary>
@@ -87,16 +87,16 @@ public class Enemy : MonoBehaviour
     /// Returns:
     /// void (no return)
     /// </summary>
-   //private void HandleBehaviour()
-   // {
-   //     // Check if the target is in range, then move
-    //    if (followTarget != null && (followTarget.position - transform.position).magnitude < followRange)
-    //    {
-   //         MoveEnemy();
-    //    }
-       // Attempt to shoot, according to this enemy's shooting mode
-   //     TryToShoot();
-  //  }
+    private void HandleBehaviour()
+    {
+        // Check if the target is in range, then move
+        if (followTarget != null && (followTarget.position - transform.position).magnitude < followRange)
+        {
+            MoveEnemy();
+        }
+        // Attempt to shoot, according to this enemy's shooting mode
+        TryToShoot();
+    }
 
     /// <summary>
     /// Description:
@@ -143,7 +143,7 @@ public class Enemy : MonoBehaviour
         if (GameManager.instance != null && !GameManager.instance.gameIsOver)
         {
             GameManager.instance.IncrementEnemiesDefeated();
-        }       
+        }
     }
 
     /// <summary>
@@ -153,7 +153,7 @@ public class Enemy : MonoBehaviour
     /// Returns: 
     /// void (no return)
     /// </summary>
-    /*private void MoveEnemy()
+    private void MoveEnemy()
     {
         // Determine correct movement
         Vector3 movement = GetDesiredMovement();
@@ -164,7 +164,7 @@ public class Enemy : MonoBehaviour
         // Move and rotate the enemy
         transform.position = transform.position + movement;
         transform.rotation = rotationToTarget;
-    }*/
+    }
 
     /// <summary>
     /// Description:
@@ -178,7 +178,7 @@ public class Enemy : MonoBehaviour
     protected virtual Vector3 GetDesiredMovement()
     {
         Vector3 movement;
-        switch(movementMode)
+        switch (movementMode)
         {
             case MovementModes.FollowTarget:
                 movement = GetFollowPlayerMovement();
