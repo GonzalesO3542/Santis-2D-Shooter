@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using TMPro;
 
 /// <summary>
 /// This class handles the health state of a game object.
@@ -35,6 +36,8 @@ public class Health : MonoBehaviour
     public int maximumLives = 5;
 
     public GameObject fighter;
+    public GameObject player;
+    public bool isPlayer = false;
 
     /// <summary>
     /// Description:
@@ -47,6 +50,10 @@ public class Health : MonoBehaviour
     void Start()
     {
         SetRespawnPoint(transform.position);
+        if (isPlayer)
+        {
+            lifeText.text = "Lives: " + PlayerPrefs.GetComponent<Health>().currentLives.ToString();
+        }
     }
 
     /// <summary>
@@ -112,7 +119,10 @@ public class Health : MonoBehaviour
     {
         transform.position = respawnPosition;
         currentHealth = defaultHealth;
-        fighter.SetActive(true);
+        if (isPlayer)
+        {
+            lifeText.text = "Lives: " + player.GetComponent<Health>().currentLives.ToString();
+        }
     }
 
     /// <summary>
@@ -227,8 +237,7 @@ public class Health : MonoBehaviour
         currentLives -= 1;
         if (currentLives > 0)
         {
-            fighter.SetActive(false);
-            Invoke("Respawn", 1f);
+            Respawn();
 
         }
         else
